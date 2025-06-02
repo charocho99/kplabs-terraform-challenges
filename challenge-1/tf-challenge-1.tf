@@ -3,7 +3,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~>2.54"
+    #   version = "~>2.54"
     }
     digitalocean = {
       source = "digitalocean/digitalocean"
@@ -19,5 +19,5 @@ provider "aws" {
 }
 
 resource "aws_eip" "kplabs_app_ip" {
-  vpc = true
+  domain = "vpc"
 }
